@@ -28,14 +28,14 @@ public class lib {
     }
 
     public static void writeFile(String arg, String fileName){
-        String dir = "C:\\Users\\Zver\\Desktop\\GeekBrains\\java\\Task_1_from_lection_1\\";
-        String path = String.format("%s%s", dir, fileName);
+        String dir = "C:\\Users\\Zver\\Desktop\\GeekBrains\\java\\Task_1_from_lection_1\\"; //System.getProperty("user.dir");
+        String path = String.format("%s%s", dir, fileName); //dir.concat(fileName); 
         try (FileWriter fr = new FileWriter(path, false)) {
             fr.write(arg);
             fr.close();
         }
         catch (IOException ex) {
-            System.out.println(ex.getMessage());
+            ex.printStackTrace(); //System.out.println(ex.getMessage());
         }
     }
 

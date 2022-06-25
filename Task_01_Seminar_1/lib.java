@@ -3,12 +3,11 @@ import java.io.IOException;
 
 public class lib {
 
-    public static int FindTriangleNum(int n) {
+    public static int FindTriangleNum(int n) throws IOException {
         if (n > 0){
             return (n*(n+1)) / 2;
         }else {
-            IOException ex = new IOException();
-            return ex.hashCode();
+            throw new IOException();
         }
     }
 
