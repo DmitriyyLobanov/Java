@@ -12,9 +12,8 @@ public class program {
             ex.printStackTrace();
         }
 
-        // Задача о вычислении числа, без остатка делящегося на сумму цифр заданного числа.
-        System.out.println(lib.GetDivisible(365));
-        
+        // Задача о вычислении максимального числа, делящегося на сумму собственных цифр без, остатка из интервала.
+        System.out.println(lib.GetDivisible(10, 33));
     }
     
 }

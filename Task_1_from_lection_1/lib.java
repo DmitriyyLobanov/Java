@@ -1,5 +1,6 @@
 package Task_1_from_lection_1;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 import java.io.FileWriter;
@@ -15,7 +16,8 @@ public class lib {
     }
 
     public static String createPolynome(int maxDegree){
-        int randCoef = ThreadLocalRandom.current().nextInt(0, 101);
+        Random rand = new Random();
+        int randCoef = rand.nextInt(101);;
         String res = "";
         while (maxDegree != 0){
             randCoef = ThreadLocalRandom.current().nextInt(0, 101);

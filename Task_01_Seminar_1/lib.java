@@ -1,5 +1,9 @@
 package Task_01_Seminar_1;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 
 public class lib {
 
@@ -11,17 +15,29 @@ public class lib {
         }
     }
 
-    public static int GetDivisible(int number) {
+    public static int GetDivisible(int min, int max) {
         
-        if (number < 0) return -number * 2;
-        if (number <= 9) return number * 2;
-        else{
+        int result = 0;
+        List<Integer> numList = new ArrayList<>();
+        for (int i = min; i <= max; i++) {
+            
+            int currentNum = i;
             int count = 0;
-            while (number != 0){
-                count += number % 10;
-                number /= 10;
+
+            while (currentNum > 0) {
+
+                count += currentNum % 10;
+                currentNum /= 10;
             }
-            return count * 2;
+            if (i % count == 0){
+                numList.add(i);
+            }
         }
+        result = Collections.max(numList);
+        //System.out.println(numList);
+        return result;
     }
+    
+
 }
+
